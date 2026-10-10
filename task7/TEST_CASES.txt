@@ -1,0 +1,26 @@
+Чередование слов из двух файлов:
+.\task07.exe -r sample1.txt sample2.txt mixed.txt
+Открой mixed.txt. Ожидается:
+one two three four five
+
+Изменение слов по их позиции:
+.\task07.exe -a words.txt changed.txt
+Открой changed.txt. Ожидается:
+One two three four 146151166145 six SEVEN eight nine 131012111232
+
+Проверка ошибки (несуществующий входной файл):
+.\task07.exe -a nofile.txt result.txt
+Ожидается сообщение «Не открылся файл».
+
+Неизвестный флаг:
+.\task07.exe -x sample1.txt result.txt
+Ожидается подсказка с допустимыми флагами.
+
+Не удалось открыть выходной файл:
+.\task07.exe -a words.txt missing_folder\result.txt
+Ожидается сообщение «Не открылся файл».
+
+Не открылся второй входной файл:
+.\task07.exe -r sample1.txt nofile.txt mixed.txt
+Ожидается: Не открылся файл
+
